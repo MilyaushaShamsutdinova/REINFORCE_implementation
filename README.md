@@ -25,13 +25,13 @@ RLHF [[1]](https://arxiv.org/pdf/2203.02155) — фундаментальный
 
 - Полученная модель: [MilyaShams/SmolLM2-135M-Instruct-Reward](https://huggingface.co/MilyaShams/SmolLM2-135M-Instruct-Reward).
 
-- Результаты тренировки
+- **Результаты**:
 
     Наблюдается стабильное уменьшение лосса и увеличение точности.
     <!-- 
     ![rm_level_1](https://github.com/MilyaushaShamsutdinova/REINFORCE_implementation/blob/main/assets/rm_level_1.png?raw=True) -->
 
-    <img src="assets/rm_level_1.png" width="400"/><img src="assets/rm_level_1_accuracy.png" width="400"/>
+    <img src="assets/rm_level_1.png" width="300"/><img src="assets/rm_level_1_accuracy.png" width="300"/>
 
 
 ### Policy model
@@ -53,7 +53,7 @@ RLHF [[1]](https://arxiv.org/pdf/2203.02155) — фундаментальный
 
 - [Ноутбук с кодом](https://github.com/MilyaushaShamsutdinova/REINFORCE_implementation/blob/main/src/level_1/reinforce_with_baseline.ipynb)
 
-- Результаты тренировки
+- **Результаты**:
 
     | Training progress| Avg reward         |
     | ---------------- |:------------------:| 
@@ -74,11 +74,12 @@ RLHF [[1]](https://arxiv.org/pdf/2203.02155) — фундаментальный
 
     Так как наша цель максимизировать вероятность $p(y_w \succ y_l | x)$, следовательно мы можем определить функцию потерь как $-log(p(y_w \succ y_l | x))$. Таким образом, минимизация этого лосса эквивалентна максимизации вероятности предпочтения $y_w$.
 
-    Objective: max($p(y_w \succ y_l | x)$) or min($-log(p(y_w \succ y_l | x))$)
+    Objective: max( $p(y_w \succ y_l | x)$ ) or min( $-log(p(y_w \succ y_l | x))$ )
 
-    Since, $ p(y_w \succ y_l | x) = \sum_{i=1}^{10} \sum_{j=1}^{i-1} p_w(i) \cdot p_l(j), \quad \text{где } i > j$
+    Since,
+    $p(y_w \succ y_l | x) = \sum_{i=1}^{10} \sum_{j=1}^{i-1} p_w(i) \cdot p_l(j), \quad \text{где } i > j$
 
-    Loss: $ \mathcal{L_{RM}} = -\log \left( \sum_{i=2}^{10} \sum_{j=1}^{i-1} p_w(i) \cdot p_l(j) \right)$
+    Loss: $\mathcal{L_{RM}} = -\log \left( \sum_{i=2}^{10} \sum_{j=1}^{i-1} p_w(i) \cdot p_l(j) \right)$
 
 - SFT модель: [HuggingFaceTB/SmolLM2-135M-Instruct](https://huggingface.co/HuggingFaceTB/SmolLM2-135M-Instruct)
 
@@ -92,11 +93,11 @@ RLHF [[1]](https://arxiv.org/pdf/2203.02155) — фундаментальный
 
 - Полученная модель: [MilyaShams/SmolLM2-135M-Instruct-Reward-probabilistic](https://huggingface.co/MilyaShams/SmolLM2-135M-Instruct-Reward-probabilistic).
 
-- Результаты тренировки
+- **Результаты**:
 
     Так же наблюдается стабильное уменьшение лосса.
 
-    <img src="assets/rm_level_2.png" width="400"/>
+    <img src="assets/rm_level_2.png" width="300"/>
 
 ### Policy model
 
@@ -129,7 +130,7 @@ RLHF [[1]](https://arxiv.org/pdf/2203.02155) — фундаментальный
 - [Ноутбук с кодом тренировки с регуляризацией](https://github.com/MilyaushaShamsutdinova/REINFORCE_implementation/blob/main/src/level_2/reinforce_with_baseline_with_discrete_scores_with_regularization.ipynb)
 - [Ноутбук с кодом тренировки без регуляризации](https://github.com/MilyaushaShamsutdinova/REINFORCE_implementation/blob/main/src/level_2/reinforce_with_baseline_reward_with_discrete_scores.ipynb)
 
-- Результаты тренировки
+- **Результаты**:
 
     | Training progress| Avg reward         |
     | ---------------- |:------------------:| 
