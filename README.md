@@ -146,19 +146,14 @@ RLHF [[1]](https://arxiv.org/pdf/2203.02155) — фундаментальный
 
 ## Интерпретация результатов
 
-TO-DO как сравнить результаты моделей получившихся в level 1 и level 2?
-
-
-
 ### Метрики
 
 Так как у метрик разница в шкалах, то прямое сравнение абсолютных значений некорректно. Поэтому значимы лишь относительные улучшения результатов.
 
 Процент относительного улучшения считался следующим образом:
 
-<!-- $RelativeImprovement (%) = (NewValue - InitialValue) / InitialValue * 100$ -->
 
-$RelativeImprovement (\%) = \frac{(NewValue - InitialValue)}{InitialValue} \times 100$
+$RelativeImprovement = \frac{(NewValue - InitialValue)}{InitialValue} \times 100$
 
 - **Level 1 (Скалярная Reward Model)**
 
