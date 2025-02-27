@@ -1,4 +1,4 @@
-# [REINFORCE paper](https://arxiv.org/pdf/2402.14740) implementation
+# [REINFORCE paper](https://arxiv.org/pdf/2402.14740) study research
 
 RLHF [[1]](https://arxiv.org/pdf/2203.02155) — фундаментальный метод алаймента языковых моделей, который применялся при обучении ChatGPT, LLama 2, Qwen 2.5 и т.д. Как известно RLHF очень требователен к ресурсам и чувствителен к гиперпараметрам. Сложность данного метода обоснована сложностью алгоритма PPO [[2]](https://arxiv.org/pdf/1707.06347), который лежит в основе RLHF.
 
